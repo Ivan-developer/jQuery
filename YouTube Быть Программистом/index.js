@@ -50,14 +50,42 @@
 
 // })
 
-jQuery(function(){
-    //css, hide(), show()
-    // delay() - задержка
-    // animate()
-    // $('form').css({'display':'none'});
-    // $('form').show(5000) // 5000 это время 
-    // $('form').show(1000).delay(5000).hide(1000) // 5000 это время
-    $('#jj').animate({'width':'50px'}, 2000);
-})
+// jQuery(function(){
+//     //css, hide(), show()
+//     // delay() - задержка
+//     // animate()
+//     // fadeIn(), fadeOut() - по другому исчезает
+//     // atr() - либо поменять, либо получить аттрибут
+//     // как правило используется для form, можно получать value 
+//     // $('form').css({'display':'none'});
+//     // $('form').show(5000) // 5000 это время 
+//     // $('form').show(1000).delay(5000).hide(1000) // 5000 это время
+//     // $('#jj').animate({'width':'50px'}, 2000);
+//     // $('#jj').fadeOut(1000)
+//     // console.log($('input[name="name"]').attr('value'))
+//     // console.log($('.first').attr('data-id'))
+//     // console.log($('.first').data('id'))
+//     // resize 
+//     // scroll
+//     // window - весь наше окно браузера  
+//     // $(window).resize(function(){
+//     //     // width(), height()
+//     //     var width = $(this).width();
+//     //     var height = $(this).height();
+//     //     console.log(width, height)
+//     // }) 
+//     $(window).scroll(function(){
+//         // width(), height()
+//         var width = $(this).width();
+//         var height = $(this).height();
+//         console.log(width, height)
+//     }) 
+// })
 
-// 50 min остановился 
+jQuery(function(){
+    // addClass , removeClass
+    $('h2').addClass('red');
+    $('h2').hover(function(){
+        $(this.addClass('blue'))
+    })
+});
