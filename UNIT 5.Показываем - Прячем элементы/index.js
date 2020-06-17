@@ -39,19 +39,20 @@ jQuery(function(){
     // scroll
     // window - весь наше окно браузера  
 
-    // $(window).resize(function(){
-    //     // width(), height()
-    //     var width = $(this).width();
-    //     var height = $(this).height();
-    //     console.log(width, height)
-    // })
+    $(window).resize(function(){
+        // width(), height()
+        var width = $(this).width();
+        var height = $(this).height();
+        console.log(width, height)
+    })
 
-    // $(window).scroll(function(){
-    //     // width(), height()
-    //     var width = $(this).width();
-    //     var height = $(this).height();
-    //     console.log(width, height)
-    // }) 
+    $(window).scroll(function(){
+        // width(), height()
+        var width = $(this).width();
+        var height = $(this).height();
+        console.log(width, height)
+    }) 
+
 })
 
 //56.12
