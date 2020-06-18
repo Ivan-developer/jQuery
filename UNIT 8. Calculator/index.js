@@ -1,5 +1,7 @@
 $(function(){
-    $('#button').on('click', function(){
-        alert('Hello')
-    })
+   $('#formSum').on('submit', function(event){
+       event.preventDefault();
+   })
 })
+
+// 6:47
