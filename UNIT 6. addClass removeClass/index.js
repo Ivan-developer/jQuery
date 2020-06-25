@@ -13,8 +13,10 @@ jQuery(function(){
         })
     })
 
-    $('h4').mouseenter(function(){
-        $(this).toggleClass('blue')
+    $('h4').click(function(){
+        // $(this).toggleClass('blue')
+
+        console.log(event)
     })
 
     $('h5').mouseenter(function(){
