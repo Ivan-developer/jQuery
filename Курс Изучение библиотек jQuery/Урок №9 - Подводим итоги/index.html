@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <form name="form" id="form">
+        <label for="female">Женский</label>
+        <input type="radio" id="female" name="sex" value="female">
+        <label for="male">Мужской</label>
+        <input type="radio" id="male" name="sex" value="male">
+        </br>
+        <span id="message"></span>
+        </br>
+        <input type="button" id="done" onclick="return valid()"value="Готово">
+    </form>
+
+    <img id="img" src="https://tse4.mm.bing.net/th?id=OIP.odW0CyTVxMVt5s3yhjjOhwHaGL&pid=Api&P=0&w=206&h=172" alt="photo" style="display: none;">
+
+
+    <script>
+        function valid(){
+            // :checked если выбран
+            // .val() берем значение input === value
+            var state = $('input[name="sex"]:checked').val();
+            // !state если ее не существует
+            if(!state) return $('#message').html('Error')
+            // alert(state)
+            if (state === 'male'){
+                $('#img').show();
+            }
+        }
+    </script>
+</body>
+
+</html>
