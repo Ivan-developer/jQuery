@@ -8,17 +8,11 @@
 </head>
 <body>
 
-    // одно и тоже
-    $() === jQuery()
-
-    <div id="test" onclick="$('#test').hide()">Hello World</div>
+    <div class="class">Test</div>
     
-    // метод .trim() убирает пробелы
-
     <script>
-        var str = "        str    ";
-        alert(str);
-        alert($.trim(str));
+        var test = $('.class').html();
+        alert(test)
     </script>
 </body>
 </html>

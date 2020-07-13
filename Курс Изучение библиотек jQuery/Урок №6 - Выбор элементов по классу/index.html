@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="test">Test 1</div>
+    <div class="test">Test 2</div>
+    <p class="test">Test 3</p>
+    
+    <script>
+        // выделим только те классы у которых div
+        var test = $('div.test');
+        for (var i = 0; i < test.length; i++){
+            // test[i] ===  test.get(i) - разная форма записи
+            test.get(i).style.color = "red"
+            // test.get(i).css({ color: "red" })
+        }
+
+        setTimeout("$('p.test').get(0).style.color = 'green'", 2000)
+    </script>
+</body>
+</html>
