@@ -12,21 +12,24 @@
 
 <body>
 
-    <div id="div">Блок
+    <div id="div" style="background-color: red;">Блок
         <p>Абзац</p>
     </div>
     <div class="test"></div>
     
 
 
-    
+   
 
     <script>
 
-        // html text
-        alert($('#div').html())
-        alert($('#div').text())
-        $('.test').html('<h1>Hello World</h1>')
+        // Функция clone()
+        var block = $('div').clone();
+        //$('.test').html(block);
+
+        block.html('<p>Новый Абзац</p>');
+
+        $('body').append(block);
 
 
     </script>
