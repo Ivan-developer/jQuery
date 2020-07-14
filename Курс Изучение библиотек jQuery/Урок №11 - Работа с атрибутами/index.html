@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <img src="1.jpg" class="asd" alt="Изображение" title="Изображение"><br>
+    <img src="1.jpg" ><br>
+    <img src="1.jpg" ><br>
+    <img src="1.jpg" alt="Изображение" title="Изображение"><br>
+   
+
+    <script>
+        // манипуляция атрибутами
+        // Мы можем узнавать атрибуты, менять атрибуты
+        // Вседо элемент отрицание:not(найти все img у которых нет атируба alt)
+        // атрибуты добавляются с помощью atttr()
+        // Принимает два параметра, первое которое добавляет второе это значение
+
+        $(":not(img[alt])").attr("alt", "jQuery");
+        // длинная запись not
+        $("img").not("img[alt]");
+
+        var elements = $("img");
+        var text = "";
+        for(var i = 0; i < elements.length; i++){
+            text += elements[i].alt + "\n";
+            alert(text);
+        }
+
+        // className по классу 
+
+        for(var i = 0; i < elements.length; i++){
+            text += elements[i].className + "\n";
+            alert(text);
+        }
+
+    </script>
+</body>
+
+</html>
