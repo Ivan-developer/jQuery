@@ -11,20 +11,16 @@
 </head>
 
 <body>
-    
-     <div>Блок</div>
 
-     
+    <input type="text" name="text" id="text">
+    <input type="button" onclick="return val()" value="Готово">
+
     <script>
-
-        // Создание элементов
-        // prepend - до 
-        // apend - после
-        // insertBefore - вставить до дива
-
-        $('<p>Небольшой текст</p>').prependTo('div')
-        $('<p>insert Before</p>').insertBefore('div')
-        $('<p>insert After</p>').insertAfter('div')
+        // val() берет значение с любого инпута
+        function val() {
+            var text = $('#text').val();
+            alert(text)
+        }
 
     </script>
 </body>

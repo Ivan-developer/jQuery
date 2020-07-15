@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div style="height: 50px; width: 50px; background-color: red;"></div>
+    <div style="height: 50px; width: 50px; background-color: blue;"></div>
+    <div style="height: 50px; width: 50px; background-color: green;"></div>
+
+
+
+    <script>
+        // Обработчик событий
+        // onclick
+        // bind , аналог on.('', func)
+        // unbind - убрать обработчик, если сделали то один раз толко сработает
+        // on - 
+        // и еще никогда не используйте методы live() and die() в место них on() and off()
+        // substring(start,end) - обрезает строку по тем кардинатам что нам нужно
+
+        function inSize(event){
+          var width = Number(event.target.style.width.substring(0, event.target.style.width.length - 2))
+          event.target.style.width = (width + 5) + "px";
+        //   $(event.target).unbind();
+            $("<p> 1 </p>" + event.screenX + "+" + event.screenY).insertAfter('div:last');
+        }
+
+        $(document).ready(function(){
+            $('div').bind('click', inSize)
+        });
+
+    </script>
+</body>
+
+</html>
