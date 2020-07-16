@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div id="coments">
+        <p>Коментарий номер 1</p>
+        <p>Коментарий номер 2</p>
+        <p>Коментарий номер 3</p>
+    </div>
+
+    <form name="form" action="#" method="POST" id="form" style="display: none;" onsubmit="return false">
+        <textarea name="comment" id="textarea" cols="30" rows="10"></textarea>
+        <input type="submit" name="send" value="Добавить коментарий" id="done">
+    </form>
+
+    <a href="#" onclick="return false" id="add_coment">Добавить Коментарий</a>    
+   
+    
+    <script>
+
+        $(document).ready(function(){
+            $(document).on('click', '#add_coment', function(){
+                var form = $('form[name="form"]');
+                form.css('display','block')
+
+                // .replaceWith() - замена тега на тег
+                $('#add_coment').replaceWith(form);
+            })
+
+            $('#done').on('click', function(){
+                var comment = $('#textarea').val();
+                // alert('Подождите загрузка коментариев...');
+                // заменил p на коментарии
+                // $('p').replaceWith(comment);
+
+                $('<h4>' + comment + '</h4>').appendTo('#coments');
+            })
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>
