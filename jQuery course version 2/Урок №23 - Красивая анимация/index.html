@@ -23,11 +23,13 @@
     </div>
     
     <script>
-        // hide(скорость, функция)
-        // show
+        // slideUp() - нет эфекта затухания в отличии от hid()
+        // slideDown() - нет эфекта затухания в отличии от show()
+        // fadeOut() - плавно исчезает в отличии от hide()
+        // fadeIn() - плавно появляется в отличии от show()
 
         function hideComments(){
-            $('#coments').hide(1000, function(){
+            $('#coments').fadeOut(2000, function(){
                 $('#hide').hide()
                 $('#show').show()
             })
@@ -35,7 +37,7 @@
         }
 
         function showComments(){
-            $('#coments').show(1000, function(){
+            $('#coments').fadeIn(2000, function(){
                 $('#hide').show()
                 $('#show').hide()
             })
